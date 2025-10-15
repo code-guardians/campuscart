@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Essential</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+  <style>
+    /* --- Global Styles --- */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+    }
+
+    header {
+      background: #222;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .navbar {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .navbar li a:hover {
+      color: #ff6b00;
+    }
+
+    .header-icons i {
+      font-size: 1.6rem;
+      margin-left: 15px;
+      cursor: pointer;
+    }
+
+    .search-box,
+    .cart,
+    .user {
+      display: none;
+    }
+
+    /* --- Product Section --- */
+    .product {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .product .heading h1 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .product-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 30px;
+      justify-content: center;
+      align-items: start;
+    }
+
+    .product-container div {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .product-container div:hover {
+      transform: scale(1.05);
+    }
+
+    /* Uniform image sizes */
+    .product-container img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 1px solid #ddd;
+    }
+
+    /* Product content styling */
+    .product-container .content {
+      padding: 10px;
+    }
+
+    .product-container h2 {
+      font-size: 18px;
+      margin: 10px 0 5px;
+    }
+
+    .product-container span {
+      font-weight: bold;
+      color: #444;
+    }
+
+    .product-container i {
+      color: #333;
+      font-size: 22px;
+      margin-top: 5px;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .product-container i:hover {
+      color: #ff6b00;
+    }
+
+    footer {
+      background: #222;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .footer a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+    }
+
+    .footer a:hover {
+      color: #ff6b00;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo"><i class='bx bx-building'></i> CampusCart</a>
+
+    <ul class="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Essential.html">Essential</a></li>
+      <li><a href="Stationery.html">Stationery</a></li>
+      <li><a href="Snacks.html">Snacks</a></li>
+      <li><a href="All.html">All Products</a></li>
+    </ul>
+
+    <div class="header-icons">
+      <i class='bx bx-menu' id="menu-icon"></i>
+      <i class='bx bx-search' id="search-icon"></i>
+      <i class='bx bx-cart' id="cart-icon"></i>
+      <i class='bx bx-user' id="user-icon"></i>
+    </div>
+  </header>
+
+  <section class="product" id="product">
+    <div class="heading">
+      <h1><span>Essential</span></h1>
+    </div>
+
+    <div class="product-container">
+      <div class="notebook">
+        <img src="https://vidyastationery.in/wp-content/uploads/2024/06/8-3.jpg" alt="product">
+        <div class="content">
+          <h2>Notebook</h2>
+          <span>Rs. 30/-</span>
+          <i class="bx bx-cart"></i>
+        </div>
+      </div>
+
+      <div class="assignment-book">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdAsD9sJy_8vDZvSbYXqF0B-1UD3mNCGJerQ&s" alt="product">
+        <div class="content">
+          <h2>Assignment Book</h2>
+          <span>Rs. 25/-</span>
+          <i class="bx bx-cart"></i>
+        </div>
+      </div>
+
+      <div class="record-sheets">
+        <img src="https://i0.wp.com/www.sfdstore.com/wp-content/uploads/2022/04/record-sheet.jpg?fit=600%2C281&ssl=1" alt="product">
+        <div class="content">
+          <h2>Record Sheets</h2>
+          <span>Rs. 50/-</span>
+          <i class="bx bx-cart"></i>
+        </div>
+      </div>
+
+      <div class="record-pads">
+        <img src="https://m.media-amazon.com/images/I/7118WHfjPmL._UF1000,1000_QL80_.jpg" alt="product">
+        <div class="content">
+          <h2>Record Pads</h2>
+          <span>Rs. 60/-</span>
+          <i class="bx bx-cart"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer">
+      <a href="index.html">Home</a>
+      <a href="Essential.html">Essential</a>
+      <a href="Stationery.html">Stationery</a>
+      <a href="Snacks.html">Snacks</a>
+      <a href="All.html">All Products</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
